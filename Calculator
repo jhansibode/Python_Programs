@@ -1,0 +1,104 @@
+cal = ['1.List', '2.Tuple', '3.Dict ', '4.String', '5.set']
+for i in cal:
+    print (i)
+List = input("do u wanted to enter a List input ?(yes/no): ")
+Tuple = input("Do you wanted to enter a Tuple input? (yes/No): ")
+Dict = input("Do you wanted to enter a Dict Input?(yes/no): ")
+String = input("Do you wanted to enter a String input?(yes/no): ")
+Set = input(" Do you wanted to enter a Set input?(yes/no): ")
+if List =="yes":
+    n = eval(input("enter a list of elements"))
+    print(n)
+    n.append(10)
+    n.insert(1, 1)
+    print(n)
+    x = n.index(10)
+    print(x)
+    n.remove(10)
+    print(n)
+    n.pop()
+    n.pop(0)
+    print(n)
+    n.copy()
+    print(n)
+    n.reverse()
+    y = n.count(6)
+    print(y)
+    n.sort()
+    print(n)
+elif List == "No":
+  print("select another option")
+else:
+    print (" ")
+if Tuple =="yes":
+    n1 = eval(input("enter a Tuple of elements"))
+    print(max(n1))
+    print(len(n1))
+    print(n1[1:2])
+elif Tuple == "No":
+  print("select another option")
+else:
+    print (" ")
+if Set =="yes":
+    n2 =eval(input("enter a set1 elements"))
+    n3=eval(input("enter a set2 elements"))
+    n2.add("apple")
+    n2.update(["orange","banana","cherry"])
+    print(len(n2))
+    n2.remove("banana")
+    n2.discard("banana")
+    n2.pop()
+    n2.clear()
+#    d = eval(input())
+    n3.difference(n2)
+    print(n3)
+    n3.intersection(n2)
+    print(n2)
+    n3.union(n2)
+    print(n3)
+elif set =="No":
+    print("selct another option")
+else:
+    print (" ")
+if Dict =="yes":
+    n4 =eval(input("enter a Dict elements"))
+    n4.copy()
+    print(n4)
+    n4.keys()
+    print(n4)
+    n4.values()
+    print(n4)
+    n4.items()
+    n4.setdefault("c")
+    print(n4)
+    n4.get("b")
+    print(n4)
+    n4.pop("a")
+    print(n4)
+    n4.popitem()
+    print(n4)
+    n4.clear()
+    print(n4)
+elif Dict =="No":
+    print("selct another option")
+else:
+    print(" ")
+if String =="yes":
+    n5 = input()
+    a=n5.capitalize()
+    print(a)
+    b=n5.center(60,"*")
+    print(b)
+    c =n5.endswith("a")
+    print(c)
+    d=n5.upper()
+    print(d)
+    e=n5.swapcase()
+    print(e)
+elif String=="no":
+    print("No other options left to select")
+else:
+    print(" ")
+
+
+
