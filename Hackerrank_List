@@ -1,0 +1,20 @@
+n =int(input())
+l =[]
+for i in range (n):
+    m =[(x) for x in input().split(' ')]
+    if m[0]=='insert':
+        l.insert(int(m[1]),int(m[2]))
+    if m[0]=='remove':
+        l.remove(int(m[1]))
+    if m[0]=='append':
+        l.append(int(m[1]))
+    if m[0]=='sort':
+        l.sort()
+    if m[0]=='pop':
+        l.pop()
+    if m[0]=='reverse':
+        l.reverse()
+    if m[0]=='print':
+        print(l)
+
+
