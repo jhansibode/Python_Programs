@@ -1,0 +1,143 @@
+f = open("My_Resume.txt", "w")
+print("resume writting:\n ")
+list = ['1.phonenumber', '2.college', '3.School', '4.Professional Experiences', '5. Projetcs', '6.Technical skills',
+        '7.hobbies']
+for i in list:
+    print(i)
+phn = input("enter your contact details?(yes/no): ")
+clg = input("enter your College?(yes/no): ")
+sch = input("enter your School?(yes/no): ")
+exp = input("enetr your Professional Experiences?(yes/no): ")
+project = input(" enter your projects?(yes/no): ")
+Techskills = input("Enter a Technical skills?(yes/no):")
+Hobbies = input("Enter Hobbies?(yes/no):")
+
+if phn == "yes":
+    f.write("Phone number:\n")
+    name = input("Name: ")
+    f.write("Name:\n")
+    f.write(name)
+    mob = input("phnnumber: ")
+    f.write("phnnumber:\n")
+    f.write(mob)
+    email = input("Email ID: ")
+    f.write("\nEmail ID:")
+    f.write(email)
+else:
+    print(" not intresetd to enter personal details")
+
+if clg == "yes":
+    f.write("college info:\n")
+    clg_name = int(input(" no.of higest degree clgs: "))
+    for i in range(clg_name):
+        j = input("College Name: ")
+        d = input("Degree: ")
+        s = input("Specialization: ")
+        p = input("Percentage: ")
+        k = int(input("Start Year: "))
+        l = int(input("End Year: "))
+        if l < k:
+            print("Finish Year cannot be after Start year")
+        else:
+            m = l - k
+            f.write("college name:\n ")
+        f.write(j)
+        f.write("\nDegree: ")
+        f.write(d)
+        f.write("\nSpecialization: ")
+        f.write(s)
+        f.write("Percent: \n")
+        f.write(p)
+        f.write(" Duration(In Years): ")
+        f.write(str(m))
+elif clg == "no":
+    print(" ")
+if sch == "yes":
+    print("\n")
+    f.write("School edcucation \n:")
+    Inter = input("Inter Percentage: ")
+    boardName = input("Board of education: ")
+    Cource_duration = input("Year: ")
+    f.write("Percentage: ")
+    f.write(Inter)
+    f.write("boardName:\n")
+    f.write(Cource_duration)
+    f.write("\nYear: ")
+    f.write(Cource_duration)
+    print("Enter scool details")
+    tenth = input("Percentages: ")
+    tenth_board = input("Board: ")
+    tenth_year = input("Year: ")
+    f.write("Percentages: ")
+    f.write(tenth)
+    f.write("\Board: ")
+    f.write(tenth_board)
+    f.write("\nYear: ")
+    f.write(tenth_year)
+
+else:
+    print("No Details to school")
+
+# Professional Experiences
+if exp == "yes":
+    print("\n")
+    f.write("\nProfessional Experiences :")
+    n_org = int(input("Number of Organizations you worked"))
+    for i in range(n_org):
+        j = input("Organization Name:")
+        k = input("Designation:")
+        l = input(" Project Duration :")
+        f.write("Organization Name:\n")
+        f.write(j)
+        f.write("\Designation:")
+        f.write(k)
+        f.write("\n Experience:")
+        f.write(l)
+        if project == "yes":
+            print("\n")
+        f.write("\nProfessional Projects :")
+        n_proj = int(input("Number of Projects:"))
+        for i in range(n_proj):
+            j = input("Projct Title:")
+        k = input("Project Duration[Start Month - End Month](Number of years & Months): ")
+        l = input("Project Summary:")
+        f.write("\nProject Title:")
+        f.write(j)
+        f.write("\nProject Tenure:")
+        f.write(k)
+        f.write("\nProject Summary:")
+        f.write(l)
+elif project == "no":
+    print("\n")
+else:
+    print(" i am a fresher")
+
+# Skills & Area of Expertise
+if Techskills == "yes":
+    print("\n")
+    f.write("\nSkills And Area of Expertise :")
+    skills = input(" your skills please: ")
+    interests = input("Write down your Areas of interets please: ")
+    f.write("\nSkill Sets: ")
+    f.write(skills)
+    f.write("\nAreas of Interests: ")
+    f.write(interests)
+    f.write("\n*")
+elif Techskills == "no":
+    print("\n")
+else:
+    print("")
+
+# Extra Curricular Activities
+if Hobbies == "yes":
+    print("\n")
+    f.write("\nExtracurricular Activities :")
+    ec_activities = int(input("Number of Extra-curricular Activities:"))
+    for i in range(ec_activities):
+        j = input("Activity Summary: ")
+        f.write("\n Activity Summary: ")
+        f.write(j)
+elif Hobbies == "no":
+    print("\n")
+f.close()
+
